@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d3e86393-7922-4e03-a98a-a3b1e8f1ff92"
+      }
+    },
+    "owner": "teomrd"
   }
 }
