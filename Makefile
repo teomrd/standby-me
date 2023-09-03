@@ -13,6 +13,12 @@ dev: install
 compile: install
 	yarn compile
 
+lint:
+	yarn lint
+
+checks: compile lint
+	echo "All good ✅"
+
 clean:
 	rm -rf ./node_modules
 	rm -rf ./*lock*
