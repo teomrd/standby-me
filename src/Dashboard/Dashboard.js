@@ -1,15 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Dashboard } from './src/Dashboard/Dashboard';
 
-export default function App() {
+export const Dashboard = () => {
   return (
-    <View style={styles.container}>
-      <Dashboard />
-      <StatusBar style="auto" />
+    <View>
+      <Text>Hello from Dashboard</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
