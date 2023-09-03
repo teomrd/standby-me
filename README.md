@@ -2,6 +2,10 @@
 
 > Transform your old (*or new*) tablet (*or phone - or any screen device*) to an infotainment system.
 
+## Developer notes
+
+* Node version: `18.17.1`
+* Preferred package manager: `yarn`
 
 ## Inspirational designs
 
@@ -12,7 +16,7 @@
 
 ## Widgets
 
-* ⏰ Clock 
+* ⏰ Clock
 * 📆 Calendar
 * ⛈️ Weather
 * 🎵 Spotify
