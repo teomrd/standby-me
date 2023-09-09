@@ -22,3 +22,6 @@ checks: compile lint
 clean:
 	rm -rf ./node_modules
 	rm -rf ./*lock*
+
+build:
+	eas build
