@@ -23,5 +23,5 @@ clean:
 	rm -rf ./node_modules
 	rm -rf ./*lock*
 
-build:
-	eas build
+build-dev:
+	eas build --profile development
