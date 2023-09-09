@@ -1,8 +1,10 @@
+import { useKeepAwake } from "expo-keep-awake";
 import { StyleSheet, View } from "react-native";
 
 import { Clock } from "../Widgets/Clock/Clock";
 
 export const Dashboard = () => {
+  useKeepAwake();
   return (
     <View style={styles.container}>
       <View
