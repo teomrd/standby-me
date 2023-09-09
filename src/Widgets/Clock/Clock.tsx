@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -12,9 +13,14 @@ export const Clock = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
-        {date.getHours()}:{date.getMinutes()}
-      </Text>
+      <Text style={styles.hour}>{`${format(date, "HH")}:${format(
+        date,
+        "mm",
+      )}`}</Text>
+      <Text style={styles.date}>{`${format(date, "EEE")}, ${format(
+        date,
+        "dd MMMM",
+      )}`}</Text>
     </View>
   );
 };
@@ -25,11 +31,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    borderColor: "red",
-    borderStyle: "solid",
-    borderWidth: 1,
+    margin: "5%",
+    // borderColor: "red",
+    // borderStyle: "solid",
+    // borderWidth: 1,
   },
-  text: {
+  hour: {
     color: "white",
+    fontSize: 50,
+  },
+  date: {
+    color: "white",
+    fontSize: 20,
   },
 });

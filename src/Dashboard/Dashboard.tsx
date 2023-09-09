@@ -5,7 +5,17 @@ import { Clock } from "../Widgets/Clock/Clock";
 export const Dashboard = () => {
   return (
     <View style={styles.container}>
-      <Clock />
+      <View
+        style={{
+          width: "50%",
+          flex: 1,
+          backgroundColor: "#000",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Clock />
+      </View>
     </View>
   );
 };
