@@ -32,16 +32,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     margin: "5%",
+    padding: "5%",
     // borderColor: "red",
     // borderStyle: "solid",
     // borderWidth: 1,
   },
   hour: {
     color: "white",
-    fontSize: 50,
+    fontSize: 100,
   },
   date: {
     color: "white",
-    fontSize: 20,
+    fontSize: 25,
+    textAlign: "center",
   },
 });
