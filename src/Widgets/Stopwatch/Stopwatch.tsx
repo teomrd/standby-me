@@ -25,17 +25,33 @@ export const Stopwatch = () => {
     setTimerId(null);
   };
 
+  const reset = () => {
+    pause();
+    setSeconds(0);
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.hour}>
         {paddingZero(`${parseInt(`${seconds / 60}`, 10)}`)}:
         {paddingZero(`${seconds % 60}`)}
       </Text>
-      {timerId ? (
-        <Button onPress={pause} title="stop" color="#CE0F14" />
-      ) : (
-        <Button onPress={start} title="start" color="#78AE48" />
-      )}
+      <View style={styles.controls}>
+        {!timerId && seconds > 0 && (
+          <View style={styles.control}>
+            <Button onPress={reset} title="reset" color="#FEFF62" />
+          </View>
+        )}
+        {timerId ? (
+          <View style={styles.control}>
+            <Button onPress={pause} title="stop" color="#CE0F14" />
+          </View>
+        ) : (
+          <View style={styles.control}>
+            <Button onPress={start} title="start" color="#78AE48" />
+          </View>
+        )}
+      </View>
     </View>
   );
 };
@@ -48,17 +64,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     margin: "5%",
     padding: "5%",
-    // borderColor: "red",
-    // borderStyle: "solid",
-    // borderWidth: 1,
   },
   hour: {
     color: "white",
     fontSize: 50,
   },
-  date: {
-    color: "white",
-    fontSize: 25,
-    textAlign: "center",
+  controls: {
+    width: "100%",
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  control: {
+    flex: 1,
   },
 });
