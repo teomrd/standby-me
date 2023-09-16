@@ -2,6 +2,7 @@ import { useKeepAwake } from "expo-keep-awake";
 import { StyleSheet, View } from "react-native";
 
 import { Clock } from "../Widgets/Clock/Clock";
+import { Stopwatch } from "../Widgets/Stopwatch/Stopwatch";
 
 export const Dashboard = () => {
   useKeepAwake();
@@ -17,6 +18,17 @@ export const Dashboard = () => {
         }}
       >
         <Clock />
+      </View>
+      <View
+        style={{
+          width: "50%",
+          flex: 1,
+          backgroundColor: "#000",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Stopwatch />
       </View>
     </View>
   );
