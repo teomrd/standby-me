@@ -16,12 +16,12 @@ export const Clock = () => {
       <Text
         adjustsFontSizeToFit
         numberOfLines={1}
-        style={styles.hour}
+        style={[styles.hour]}
       >{`${format(date, "HH")}:${format(date, "mm")}`}</Text>
       <Text
         adjustsFontSizeToFit
         numberOfLines={1}
-        style={styles.date}
+        style={[styles.date]}
       >{`${format(date, "EEE")}, ${format(date, "dd MMMM")}`}</Text>
     </View>
   );
