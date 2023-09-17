@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+
+import Button from "../../Button/Button";
 
 const paddingZero = (text: string) => {
   return `${text.length === 1 ? "0" : ""}${text}`;
@@ -30,6 +32,8 @@ export const Stopwatch = () => {
     setSeconds(0);
   };
 
+  const isPaused = !timerId && seconds > 0;
+
   return (
     <View style={styles.container}>
       <Text style={styles.hour} adjustsFontSizeToFit numberOfLines={1}>
@@ -37,18 +41,27 @@ export const Stopwatch = () => {
         {paddingZero(`${seconds % 60}`)}
       </Text>
       <View style={styles.controls}>
-        {!timerId && seconds > 0 && (
+        {isPaused && (
           <View style={styles.control}>
-            <Button onPress={reset} title="reset" color="#FEFF62" />
+            <Button onPress={reset} title="reset" backgroundColor="#333333" />
           </View>
         )}
         {timerId ? (
           <View style={styles.control}>
-            <Button onPress={pause} title="stop" color="#CE0F14" />
+            <Button
+              onPress={pause}
+              title="stop"
+              backgroundColor="rgba(205, 15, 20, 0.5)"
+            />
           </View>
         ) : (
           <View style={styles.control}>
-            <Button onPress={start} title="start" color="#78AE48" />
+            <Button
+              onPress={start}
+              title={isPaused ? "restart" : "start"}
+              backgroundColor="rgba(104, 206, 103, 0.25)"
+              color="rgba(104, 206, 103, 1)"
+            />
           </View>
         )}
       </View>
@@ -71,6 +84,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   control: {
-    flex: 1,
+    margin: 10,
   },
 });
