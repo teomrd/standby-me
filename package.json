@@ -11,6 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/hooks": "^3.0.0",
     "@types/react": "~18.2.14",
     "date-fns": "^2.30.0",
     "expo": "~49.0.8",

@@ -1,3 +1,4 @@
+import { useDeviceOrientation } from "@react-native-community/hooks";
 import { useKeepAwake } from "expo-keep-awake";
 import { StyleSheet, View } from "react-native";
 
@@ -6,9 +7,18 @@ import { Stopwatch } from "../Widgets/Stopwatch/Stopwatch";
 
 export const Dashboard = () => {
   useKeepAwake();
+  const orientation = useDeviceOrientation();
+
   return (
-    <View style={styles.container}>
-      <View style={[styles.widget, { flex: 3 }]}>
+    <View
+      style={[
+        styles.container,
+        {
+          flexDirection: orientation === "landscape" ? "row" : "column",
+        },
+      ]}
+    >
+      <View style={[styles.widget, { flex: 1 }]}>
         <Clock />
       </View>
       <View style={[styles.widget, { flex: 1 }]}>
