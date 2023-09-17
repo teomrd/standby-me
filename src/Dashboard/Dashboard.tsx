@@ -8,26 +8,10 @@ export const Dashboard = () => {
   useKeepAwake();
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          width: "50%",
-          flex: 1,
-          backgroundColor: "#000",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <View style={styles.widget}>
         <Clock />
       </View>
-      <View
-        style={{
-          width: "50%",
-          flex: 1,
-          backgroundColor: "#000",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <View style={styles.widget}>
         <Stopwatch />
       </View>
     </View>
@@ -36,13 +20,15 @@ export const Dashboard = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
     flex: 1,
     backgroundColor: "#000",
     alignItems: "center",
     justifyContent: "center",
+    flexDirection: "row",
   },
-  text: {
-    color: "white",
+  widget: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

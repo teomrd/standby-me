@@ -58,20 +58,16 @@ export const Stopwatch = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    margin: "5%",
-    padding: "5%",
   },
   hour: {
     color: "white",
-    fontSize: 50,
+    fontSize: 100,
   },
   controls: {
     width: "100%",
-    flex: 1,
+    fontSize: 25,
     flexDirection: "row",
     alignItems: "center",
   },

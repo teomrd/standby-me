@@ -27,15 +27,8 @@ export const Clock = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    margin: "5%",
-    padding: "5%",
-    // borderColor: "red",
-    // borderStyle: "solid",
-    // borderWidth: 1,
   },
   hour: {
     color: "white",
