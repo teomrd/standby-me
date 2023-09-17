@@ -13,14 +13,16 @@ export const Clock = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.hour}>{`${format(date, "HH")}:${format(
-        date,
-        "mm",
-      )}`}</Text>
-      <Text style={styles.date}>{`${format(date, "EEE")}, ${format(
-        date,
-        "dd MMMM",
-      )}`}</Text>
+      <Text
+        adjustsFontSizeToFit
+        numberOfLines={1}
+        style={styles.hour}
+      >{`${format(date, "HH")}:${format(date, "mm")}`}</Text>
+      <Text
+        adjustsFontSizeToFit
+        numberOfLines={1}
+        style={styles.date}
+      >{`${format(date, "EEE")}, ${format(date, "dd MMMM")}`}</Text>
     </View>
   );
 };

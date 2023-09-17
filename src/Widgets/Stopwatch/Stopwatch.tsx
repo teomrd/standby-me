@@ -32,7 +32,7 @@ export const Stopwatch = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.hour}>
+      <Text style={styles.hour} adjustsFontSizeToFit numberOfLines={1}>
         {paddingZero(`${parseInt(`${seconds / 60}`, 10)}`)}:
         {paddingZero(`${seconds % 60}`)}
       </Text>
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
   },
   controls: {
     width: "100%",
-    fontSize: 25,
     flexDirection: "row",
     alignItems: "center",
   },

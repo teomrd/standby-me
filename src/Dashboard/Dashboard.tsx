@@ -8,10 +8,10 @@ export const Dashboard = () => {
   useKeepAwake();
   return (
     <View style={styles.container}>
-      <View style={styles.widget}>
+      <View style={[styles.widget, { flex: 3 }]}>
         <Clock />
       </View>
-      <View style={styles.widget}>
+      <View style={[styles.widget, { flex: 1 }]}>
         <Stopwatch />
       </View>
     </View>
